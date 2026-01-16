@@ -5,7 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    // Injects Vercel environment variables into the client-side code at build time
+    // Explicitly define each process.env key to ensure reliable replacement in the source code
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+    'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
+    'process.env.SUPABASE_ANON_KEY': JSON.stringify(process.env.SUPABASE_ANON_KEY),
+    // Fallback object definition
     'process.env': {
       API_KEY: JSON.stringify(process.env.API_KEY),
       SUPABASE_URL: JSON.stringify(process.env.SUPABASE_URL),
