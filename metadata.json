@@ -1,0 +1,7 @@
+{
+  "name": "Tamilwriter AI",
+  "description": "A high-performance, minimalist SaaS for Tamil transliteration and AI-powered grammar correction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
