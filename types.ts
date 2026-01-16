@@ -5,6 +5,8 @@ export interface Suggestion {
   original: string;
   suggestion: string;
   reason: string;
+  index?: number; // Starting index in the text for highlighting
+  length?: number; // Length of the original text
 }
 
 export interface GrammarResponse {
@@ -24,3 +26,5 @@ export enum AppStatus {
   SUCCESS = 'SUCCESS',
   ERROR = 'ERROR'
 }
+
+export type AIModel = 'gemini-3-flash-preview' | 'gemini-3-pro-preview';
